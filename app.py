@@ -10,7 +10,9 @@ FILENAME = "../../Downloads/Cloud-master/ZKHP.html"
 con = sql.connect(FILENAME)
 C = con.cursor()
 
-# ID set is used to ensure all recipes have unique ID
+# ID set is used to make sure the recipes have a unique ID
+# APP_ID and API_KEY were given by Edamame to create an account to use the API
+
 IDS = {-1}
 APP_ID = '8228a6c6'
 API_KEY = 'bd00528170e470eae3f228cb5bc7a1fc'
@@ -19,11 +21,7 @@ URL = f'https://api.edamam.com/search?/app_id=8228a6c6&app_key=bd00528170e470eae
 
 
 
-"""
-============================================================================
-RECIPE APP:
-============================================================================
-"""
+# The following code is for the Recipe APP
 
 @app.route('/')
 @app.route('/home')
@@ -57,11 +55,7 @@ def main():
     C.close()
 
 
-"""
-============================================================================
-FIND NEW RECIPES:
-============================================================================
-"""
+# The following lines are for searching recipes from the API
 
 @app.route('/ZKHP.html', methods=['GET','POST'])
 def query_recipes():
