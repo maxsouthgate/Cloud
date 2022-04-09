@@ -28,6 +28,7 @@ URL = f'https://api.edamam.com/search?/app_id=8228a6c6&app_key=bd00528170e470eae
 def home():
     return render_template("ZKHP.html")
 
+# The following lines are for searching recipes from the API
 
 @app.route('/submit', methods=['GET', 'POST'])
 def result():
@@ -36,11 +37,8 @@ def result():
     Ingredient = output["Ingredient"]
 
 def main():
-    """
-    This program allows the user to search for recipes online using the
-    Edamam API. It also allows the user to save lookup info for favorite
-    recipes into a database. Finally, the user can look up saved recipes.
-    """
+    #This program allows the user to search for recipes online using the API.
+
     print()
     command = ''
     while command.lower() != 'q':
@@ -55,13 +53,12 @@ def main():
     C.close()
 
 
-# The following lines are for searching recipes from the API
 
 @app.route('/ZKHP.html', methods=['GET','POST'])
 def query_recipes():
-    """
-    Search and select recipe to view from API.
-    """
+   
+# Search and select recipe to view from API.
+ 
     response = None
     success = False
     index = 0
@@ -79,7 +76,7 @@ def query_recipes():
     index = display_recipe_labels(data, index)
     print(f"   Select Recipe # (1-{index})\n   (enter 'm' to see more)")
     select = select_from_index(index)
-    # Allows user to request 20 more recipes with same keyword
+    # Enables user to query 20 more recipes with same keyword
     if select == 'm' and index == 20:
         _from = 20
         to = 40
@@ -95,10 +92,8 @@ def query_recipes():
 
 
 def display_recipe_labels(data, index):
-    """
-    Displays all recipe labels from a result of request.
-    Returns the max index of list of recipes.
-    """
+   # Shows all recipes from the result of the request.
+    
     print()
     for recipe in data:
         index += 1
