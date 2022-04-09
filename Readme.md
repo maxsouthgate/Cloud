@@ -22,8 +22,11 @@ FLASK-restful-app:
 The following libraries were added to support the app.route function:
 <img width="448" alt="image" src="https://user-images.githubusercontent.com/102805353/162567943-84650309-f2f5-4bb2-9ab3-127bae623445.png">
 
+The recipe APP was created by executing the code below:
+<img width="441" alt="image" src="https://user-images.githubusercontent.com/102805353/162568328-7f0d3f21-5711-4090-bd67-2cc7a6146c9a.png">
 
-
+Running the app.py file would result in:
+<img width="389" alt="image" src="https://user-images.githubusercontent.com/102805353/162568512-5bbfe32e-89a7-47fd-8f2f-0680342126d4.png">
 
 
 
