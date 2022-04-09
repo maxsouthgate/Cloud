@@ -1,6 +1,5 @@
 import requests
 import sqlite3 as sql
-# import json
 import urllib
 from random import randint
 from flask import Flask, render_template, url_for, request
