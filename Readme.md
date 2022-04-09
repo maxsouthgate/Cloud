@@ -13,6 +13,15 @@ Note: -----
 The front-end of the website is user friendly and easily navigate  
 
 
+## Backend
+
+Postman was used to test the API for CRUD operations. Please refer to the video for the full explanation and examples.
+
+FLASK-restful-app:
+
+The following libraries were added to support the app.route function:
+<img width="448" alt="image" src="https://user-images.githubusercontent.com/102805353/162567943-84650309-f2f5-4bb2-9ab3-127bae623445.png">
+
 
 
 
@@ -21,3 +30,4 @@ The front-end of the website is user friendly and easily navigate
 ## Front End
 
 The current version of the front-end can only be ran locally. It was successfully tested on macOS Big Sur launched over the command line. The IOS simulator or Android emulator can be launched through the web interface of the local server. Node.js is required alongside with the respective Node version, please see nvm and docker section above in further detail.
+
